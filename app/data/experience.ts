@@ -51,7 +51,7 @@ export const experienceData: Experience[] = [
     ]
   },
   {
-    companyLogo: "/images/huron.jpg",
+    companyLogo: "/images/Huron.jpg",
     company: "Huron Consulting Group",
     roles: [
       {
