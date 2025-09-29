@@ -69,14 +69,14 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center py-12 px-4">
+    <div className="bg-black text-white min-h-screen">
+      <div className="flex flex-col items-center justify-center py-8 md:py-12 px-4">
         {renderMainContent()}
       </div>
-      
+
       <TopNav currentPage={currentPage} onPageChange={setCurrentPage} />
-      
-      <div className="flex flex-col items-center justify-center py-12 px-4">
+
+      <div className="flex flex-col items-center justify-center py-8 md:py-12 px-4">
         {renderPageContent()}
       </div>
     </div>
