@@ -40,14 +40,14 @@ function ProjectCard({ project }: { project: Project }) {
   }, [project.repo, project.description]);
 
   return (
-    <div className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+    <div className="border border-gray-700 rounded-lg p-4 md:p-6 hover:shadow-lg hover:shadow-gray-800/50 transition-shadow bg-gray-900">
       <div className="flex items-start justify-between mb-2">
-        <h3 className="text-xl font-semibold">
+        <h3 className="text-lg md:text-xl font-semibold">
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
+            className="text-blue-400 hover:text-blue-300"
           >
             {project.name}
           </a>
@@ -59,7 +59,7 @@ function ProjectCard({ project }: { project: Project }) {
         )}
       </div>
 
-      <div className="text-gray-600 mb-4">
+      <div className="text-gray-300 mb-4">
         <p className="text-sm whitespace-pre-wrap">{description}</p>
       </div>
 
@@ -76,7 +76,7 @@ function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
 
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-400">
         Repository: {project.repo}
       </p>
     </div>
@@ -89,12 +89,12 @@ export default function Projects() {
   const regularProjects = projectsData.filter(project => !project.featured);
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-4 md:py-8">
 
       {featuredProjects.length > 0 && (
-        <div className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6">Featured Projects</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-8 md:mb-12">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white">Featured Projects</h2>
+          <div className="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featuredProjects.map((project, index) => (
               <ProjectCard key={`featured-${index}`} project={project} />
             ))}
@@ -104,8 +104,8 @@ export default function Projects() {
 
       {regularProjects.length > 0 && (
         <div>
-          <h2 className="text-2xl font-semibold mb-6">All Projects</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-white">All Projects</h2>
+          <div className="grid gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
             {regularProjects.map((project, index) => (
               <ProjectCard key={`regular-${index}`} project={project} />
             ))}
