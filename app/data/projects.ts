@@ -13,8 +13,15 @@ export const projectsData: Project[] = [
     repo: "sutton-dev/billsutton.dev",
     url: "https://github.com/sutton-dev/billsutton.dev",
     technologies: ["TypeScript", "React", "Next.js"],
-    featured: true
+    featured: false
     // description will be fetched from GitHub's description.md
+  },
+  {
+    name: "query-cache",
+    repo: "sutton-dev/query-cache",
+    url: "https://github.com/sutton-dev/query-cache",
+    technologies: ["Apex", "Salesforce", "SOQL", "SOQL Query Optimizer"],
+    featured: false
   }
 ];
 
